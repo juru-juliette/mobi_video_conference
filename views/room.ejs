@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>conference</title>
+   <title>Meeting</title>
    <script>
       const ROOM_ID = "<%= roomId %>"
    </script>
@@ -83,9 +83,35 @@
 
          </div>
          <div class="main__message_container">
-            <input id="chat_message" type="text" placeholder="Type message here...">
+            <input id="chat_message" type="text" placeholder="Type message here..." required>
          </div>
       </div>
    </div>
+
+   <!--  -->
+
+   <div class="container">
+
+      <div class="jumbotron">
+          <h2><strong>Start and Join meeting </strong></h2>
+      </div>
+
+      <form>
+          <p>Username: <input type="text" name="username" id="username" placeholder="Enter username" required>
+              <p>RoomName : <select name="room" id="room">
+                      <option value="Mobicashmeeting">Mobicashmeeting</option>
+                      <option value="Julietmeeting">Juliettemeeting</option>
+
+                  </select> </p>
+
+
+              <button type="button" class="submit" id="join">Join Meeting</button>
+
+
+
+      </form>
+
+
+  </div>
 </body>
 </html>
