@@ -8,10 +8,10 @@ body {
 }
 
 .container{
-    width: 30%;
-    height: 220px;
+    width: 35%;
+    height: 350px;
     margin: 100px auto;
-    background: #212120;
+    background: #808B96;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 
 }
@@ -31,7 +31,7 @@ p{
     font-style: normal;
 }
 
-#join{
+.btn{
 
   text-transform: uppercase;
   font-weight: bold;
@@ -109,7 +109,7 @@ p{
 }
 
 .main__controls__button i {
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .main__right {
@@ -152,4 +152,3 @@ p{
 .unmute, .stop {
     color: #CC3B33;
 }
-

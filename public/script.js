@@ -8,6 +8,7 @@ const myPeer = new Peer(undefined, {
   port: '3030'
 })
 
+
 let myVideoStream;
 const myVideo = document.createElement('video')
 myVideo.muted = true;
@@ -142,4 +143,3 @@ socket.on('roomUsers', ({ room, users }) => {
   outputRoomName(room);
   outputUsers(users);
 });
-

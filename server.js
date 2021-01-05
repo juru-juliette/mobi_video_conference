@@ -1,4 +1,3 @@
-
 const express = require('express')
 const path = require('path')
 const app = express()
@@ -10,7 +9,7 @@ const peerServer = ExpressPeerServer(server, {
 });
 const { v4: uuidV4 } = require('uuid')
 const {userJoin} = require('./views/users');
-
+const formatMessage = require('./views/messages');
 // Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/peerjs', peerServer);
@@ -24,9 +23,11 @@ app.get('/', (req, res) => {
 
 app.get('/:room', (req, res) => {
   res.render('room', { roomId: req.params.room })
+  
 })
 
 io.on('connection', socket => {
+ 
   socket.on('join-room', (roomId, userId) => {
     socket.join(roomId)
     socket.to(roomId).broadcast.emit('user-connected', userId);
@@ -43,23 +44,6 @@ io.on('connection', socket => {
 })
 
 //new code 
-io.on('connection', socket => {
-  socket.on('joinRoom', ({ username, room }) => {
-    const user = userJoin(socket.id, username, room);
-    
-    socket.join(user.room);
 
-    // Broadcast when a user connects
-    socket.broadcast
-      .to(user.room)
-      .emit(
-        'message',
-        formatMessage(botName, `${user.username} has joined the chat`)
-      );
-
-    // Send users and room info
-      
-  });
-});
 
 server.listen (process.env.PORT||3030)

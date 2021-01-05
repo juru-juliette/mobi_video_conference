@@ -15,19 +15,20 @@
     <div class="container">
 
         <div class="jumbotron">
+            <img src="http://localhost:3030/images/logo.png" alt="logo" width="200px" height="100px">
             <h2><strong>Start and Join meeting </strong></h2>
         </div>
 
         <form action ="room">
             <p>Username: <input type="text" name="username" id="username" placeholder="Enter username" required>
-                <p>RoomName : <select name="room" id="room">
+                <p>RoomName : <select required  name="room" id="room">
                         <option value="Mobicashmeeting">Mobicashmeeting</option>
-                        <option value="Julietmeeting">Juliettemeeting</option>
+                        <option value="Julietmeeting" >Juliettemeeting</option>
 
                     </select> </p>
 
 
-                <button type="button" class="submit" id="join" >Join Meeting</button>
+                <button type="submit" class="btn">Join Meeting</button>
 
 
 
@@ -35,6 +36,7 @@
 
 
     </div>
+    <script src="script.js" ></script>
 </body>
 
 </html>
