@@ -1,20 +1,9 @@
 
-body {
-	
-    margin-left: 100px;
-    margin-right: 100px;
-    background-color: #2C2C2C;
-    color: whitesmoke;
+img{
+    padding-right: -20px;
 }
 
-.container{
-    width: 35%;
-    height: 350px;
-    margin: 100px auto;
-    background: #808B96;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-
-}
+/*  */
 h2{
    
   margin: 0;
@@ -25,10 +14,12 @@ h2{
   text-align: center;
 }
 
-p{
-    padding-left: 20px;
+.niceinput{
+    padding-left: 80px;
     font-size: 18px;
     font-style: normal;
+    
+    
 }
 
 .btn{
@@ -38,16 +29,25 @@ p{
   display: block;
   background: orange;
   border-radius: 5px;
-  width: 150px;
-  height: 30px;
+  width: 130px;
+  height: 20px;
   text-align: center;
   color: white; 
   margin-left: 80px;
- 
-  
-  
+   
 }
-
+h1{
+    text-align: center;
+    
+}
+#top{
+    background-image: url('https://images.unsplash.com/photo-1593642531955-b62e17bdaa9c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=800by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1526&q=80');
+    height: 700px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .main {
     height: 100vh;
@@ -152,3 +152,14 @@ p{
 .unmute, .stop {
     color: #CC3B33;
 }
+
+/* landing page */
+@keyframes animate{
+  
+    0%{
+      bottom: -100px;
+    }
+    100%{
+      bottom: 0px;
+    }
+  }
